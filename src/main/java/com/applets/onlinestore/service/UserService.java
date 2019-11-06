@@ -15,11 +15,8 @@ public class UserService {
     @Autowired
     private UserMapper testMapper;
 
-    public User get(){
-        return testMapper.sel("111");
-    }
 
-    public User get1(){
-        return testMapper.sel1("111");
+    public User findByLoginName(String loginName){
+        return testMapper.findByLoginName(loginName);
     }
 }
